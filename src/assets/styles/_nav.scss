@@ -1,0 +1,47 @@
+@use "../variables" as v;
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	padding: 1rem;
+	width: 100%;
+	backdrop-filter: blur(1rem);
+	background-color: rgba(255, 255, 255, 0);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.233);
+
+	.container {
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.nav-logo {
+			position: absolute;
+			left: calc(0% + 2rem);
+
+			img {
+				width: 100%;
+				max-width: 2.6rem;
+			}
+		}
+
+		.nav-links {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: v.$gap-md;
+
+			li {
+				display: block;
+			}
+		}
+
+		.nav-btn {
+			position: absolute;
+			right: calc(0% + 2rem);
+		}
+	}
+}
