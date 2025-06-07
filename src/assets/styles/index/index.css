@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 body {
   min-height: 100vh;
-  color: #ebebeb;
-  background: #0d0f11;
+  background: #FFFFFF;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,19 +14,15 @@ main {
 }
 
 .container {
+  padding: 0 2rem;
+  margin: auto auto;
   width: 100%;
   max-width: 1400px;
-  padding: 0 2rem;
-  margin: 0 auto;
 }
 
 a {
   text-decoration: none;
-  transition: opacity 200ms;
-  color: #ebebeb;
-}
-a:hover {
-  opacity: 0.8;
+  color: #000000;
 }
 
 ul,
@@ -35,33 +30,15 @@ ol {
   list-style: none;
 }
 
-h1 {
-  font-size: 3em; /* 48px */
-  font-weight: 600;
+.btn {
+  border-radius: 0.5rem;
+  padding: 0.6rem 2rem;
+  cursor: pointer;
 }
 
-h2 {
-  font-size: 2.5em; /* 40px */
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 2em; /* 32px */
-  font-weight: 600;
-}
-
-h4 {
-  font-size: 1.75em; /* 28px */
-  font-weight: 500;
-}
-
-h5 {
-  font-size: 1.5em; /* 24px */
-  font-weight: 500;
-}
-
-p {
-  font-size: 1em; /* 16px */
+.link {
+  font-size: 1em;
+  font-weight: 400;
 }
 
 * {
@@ -70,11 +47,13 @@ p {
   box-sizing: border-box;
   line-height: 1.25;
   font-style: normal;
-  font-family: "Poppins", serif;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
   scroll-behavior: smooth;
 }
 
-*::after, *::before {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -92,21 +71,29 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1rem;
+  padding: 0 2rem;
   width: 100%;
-  backdrop-filter: blur(1rem);
-  background-color: rgba(255, 255, 255, 0);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.233);
+  height: 4.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4rem);
+  background-color: #000000;
+  border-bottom: 1px solid #252422;
 }
 nav .container {
   position: relative;
+  padding: 0 !important;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+nav .container * {
+  color: #FFFFFF;
+}
 nav .container .nav-logo {
   position: absolute;
-  left: calc(0% + 2rem);
+  left: 0;
 }
 nav .container .nav-logo img {
   width: 100%;
@@ -116,12 +103,96 @@ nav .container .nav-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 nav .container .nav-links li {
-  display: block;
+  position: relative;
+}
+nav .container .nav-links li::before {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.1rem);
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  background-color: #64907b;
+  transform: scaleX(0);
+  transition: transform 200ms;
+}
+nav .container .nav-links li:hover::before {
+  transform: scaleX(1);
+}
+nav .container .burger-btn {
+  position: relative;
+  z-index: 5;
+  margin-left: auto;
+  display: none;
+  width: 40px;
+  height: 30px;
+  transition: all 200ms;
+  cursor: pointer;
+}
+nav .container .burger-btn span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
+  transition: all 0.2s;
+}
+nav .container .burger-btn span:nth-child(1) {
+  top: 0;
+}
+nav .container .burger-btn span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .container .burger-btn span:nth-child(3) {
+  top: calc(100% - 2px);
 }
 nav .container .nav-btn {
   position: absolute;
-  right: calc(0% + 2rem);
+  right: 0;
+  background-color: transparent;
+  border: 1px solid #64907b;
+  transition: background-color 200ms;
+}
+nav .container .nav-btn:hover {
+  background-color: #64907b;
+}
+@media screen and (max-width: 780px) {
+  nav .container .nav-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 570px) {
+  nav .container .burger-btn {
+    display: flex;
+  }
+  nav .container .nav-links {
+    position: fixed;
+    right: -20rem;
+    top: 0;
+    padding: 0 4rem;
+    width: fit-content;
+    height: 100dvh;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #000000;
+    border-left: 0.1rem solid #252422;
+    transition: right 200ms;
+  }
+}
+nav .container .opened span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+nav .container .opened span:nth-child(2) {
+  opacity: 0;
+}
+nav .container .opened span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+nav .container .opened-menu {
+  right: 0;
 }
