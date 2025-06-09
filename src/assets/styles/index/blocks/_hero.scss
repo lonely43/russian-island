@@ -44,8 +44,12 @@
 				// global styles
 				transition: 200ms;
 
+				&:hover, &:focus, &:active {
+					transform: scale(1.1);
+				}
+
 				// styling each btn
-				$alpha: 0.85;
+				$alpha: 0.9;
 				&:first-child {
 					background-color: v.$primary;
 					&:hover {
@@ -80,7 +84,7 @@
 			width: 100%;
 		}
 
-		animation: jumper 2s infinite ease-in-out;
+		animation: jumper 3s infinite ease-in-out;
 	}
 	@keyframes jumper {
 		0% {
@@ -88,7 +92,7 @@
 		}
 		50% {
 			bottom: 4rem;
-			width: 2.6rem;
+			width: 2.2rem;
 		}
 		100% {
 			bottom: 2rem;

@@ -41,7 +41,7 @@ ol {
 .m-h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 4.5em;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .link {
@@ -52,7 +52,7 @@ ol {
 .r-regular-1 {
   font-family: "Roboto", sans-serif;
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 * {
@@ -250,11 +250,14 @@ nav .container .opened-menu {
 .hero .container .hero-info-btns .btn {
   transition: 200ms;
 }
+.hero .container .hero-info-btns .btn:hover, .hero .container .hero-info-btns .btn:focus, .hero .container .hero-info-btns .btn:active {
+  transform: scale(1.1);
+}
 .hero .container .hero-info-btns .btn:first-child {
   background-color: #32936F;
 }
 .hero .container .hero-info-btns .btn:first-child:hover {
-  background-color: rgba(50, 147, 111, 0.85);
+  background-color: rgba(50, 147, 111, 0.9);
 }
 .hero .container .hero-info-btns .btn:first-child p {
   color: #FFFFFF;
@@ -263,7 +266,7 @@ nav .container .opened-menu {
   background-color: #FFFFFF;
 }
 .hero .container .hero-info-btns .btn:last-child:hover {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .hero .container .hero-info-btns .btn:last-child p {
   color: #32936F;
@@ -274,7 +277,7 @@ nav .container .opened-menu {
   bottom: 2rem;
   transform: translateX(-50%);
   width: 2rem;
-  animation: jumper 2s infinite ease-in-out;
+  animation: jumper 3s infinite ease-in-out;
 }
 .hero .hero-arrow img {
   object-fit: cover;
@@ -286,7 +289,7 @@ nav .container .opened-menu {
   }
   50% {
     bottom: 4rem;
-    width: 2.6rem;
+    width: 2.2rem;
   }
   100% {
     bottom: 2rem;
