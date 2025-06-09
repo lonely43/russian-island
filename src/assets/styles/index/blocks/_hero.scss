@@ -1,8 +1,94 @@
-@use '../../../variables' as v;
+@use "../../../variables" as v;
 
-.hero{
+.hero {
+	width: 100%;
+	min-height: 100dvh;
 
-   .container{
-      
-   }
+	display: grid;
+	place-content: center;
+
+	background-image: url(/public/hero.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	.container {
+		.hero-info {
+			display: flex;
+			flex-direction: column;
+			gap: v.$gap-xl;
+
+			text-align: center;
+
+			.hero-info-title {
+				display: flex;
+				flex-direction: column;
+				gap: v.$gap-md;
+
+				h1 {
+					color: v.$white;
+				}
+				p {
+					color: v.$white;
+				}
+			}
+		}
+
+		.hero-info-btns {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: v.$gap-md;
+
+			.btn {
+				// global styles
+				transition: opacity 400ms;
+
+				&:hover {
+					opacity: 0.8;
+				}
+
+				// styling each btn
+				&:first-child {
+					background-color: v.$primary;
+					p {
+						color: v.$white;
+					}
+				}
+				&:last-child {
+					background-color: v.$white;
+					p {
+						color: v.$primary;
+					}
+				}
+			}
+		}
+	}
+
+	.hero-arrow {
+		position: absolute;
+		left: 50%;
+		bottom: 2rem;
+		transform: translateX(-50%);
+
+		width: 2rem;
+		img {
+			object-fit: cover;
+			width: 100%;
+		}
+
+		animation: jumper 2s infinite ease-in-out;
+	}
+	@keyframes jumper {
+		0% {
+			bottom: 2rem;
+		}
+		50% {
+			bottom: 4rem;
+			width: 2.6rem;
+		}
+		100% {
+			bottom: 2rem;
+		}
+	}
 }

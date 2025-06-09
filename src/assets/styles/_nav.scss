@@ -16,7 +16,7 @@ nav {
 
 	backdrop-filter: blur(1rem);
 	background-color: rgba(v.$dark, 0.9);
-	border-bottom: 4px solid v.$dark-bright;
+	border-bottom: 2px solid v.$dark-bright;
 	box-shadow: 0 0 2rem 0rem v.$dark-bright;
 
 	.container {
@@ -149,8 +149,8 @@ nav {
 				flex-direction: column;
 				gap: v.$gap-xl;
 
-				backdrop-filter: blur(1rem);
-				background-color: rgba(v.$dark, 0.9);
+				backdrop-filter: blur(4rem);
+				background-color: rgba(v.$dark, 0.97);
 				box-shadow: 0 0 2rem 0rem v.$dark-bright;
 				border-left: 0.1rem solid v.$dark-bright;
 
