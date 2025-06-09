@@ -42,21 +42,24 @@
 
 			.btn {
 				// global styles
-				transition: opacity 400ms;
-
-				&:hover {
-					opacity: 0.8;
-				}
+				transition: 200ms;
 
 				// styling each btn
+				$alpha: 0.85;
 				&:first-child {
 					background-color: v.$primary;
+					&:hover {
+						background-color: rgba(v.$primary, $alpha);
+					}
 					p {
 						color: v.$white;
 					}
 				}
 				&:last-child {
 					background-color: v.$white;
+					&:hover {
+						background-color: rgba(v.$white, $alpha);
+					}
 					p {
 						color: v.$primary;
 					}

@@ -248,19 +248,22 @@ nav .container .opened-menu {
   gap: 1rem;
 }
 .hero .container .hero-info-btns .btn {
-  transition: opacity 400ms;
-}
-.hero .container .hero-info-btns .btn:hover {
-  opacity: 0.8;
+  transition: 200ms;
 }
 .hero .container .hero-info-btns .btn:first-child {
   background-color: #32936F;
+}
+.hero .container .hero-info-btns .btn:first-child:hover {
+  background-color: rgba(50, 147, 111, 0.85);
 }
 .hero .container .hero-info-btns .btn:first-child p {
   color: #FFFFFF;
 }
 .hero .container .hero-info-btns .btn:last-child {
   background-color: #FFFFFF;
+}
+.hero .container .hero-info-btns .btn:last-child:hover {
+  background-color: rgba(255, 255, 255, 0.85);
 }
 .hero .container .hero-info-btns .btn:last-child p {
   color: #32936F;
