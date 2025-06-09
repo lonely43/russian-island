@@ -14,9 +14,10 @@ nav {
 	justify-content: center;
 	align-items: center;
 
-	backdrop-filter: blur(4rem);
-	background-color: v.$dark;
-	border-bottom: 1px solid v.$dark-bright;
+	backdrop-filter: blur(1rem);
+	background-color: rgba(v.$dark, 0.9);
+	border-bottom: 4px solid v.$dark-bright;
+	box-shadow: 0 0 2rem 0rem v.$dark-bright;
 
 	.container {
 		position: relative;
@@ -117,9 +118,9 @@ nav {
 			right: 0;
 
 			background-color: transparent;
-			border: 1px solid v.$primary;
+			border-color: v.$primary;
 
-			transition: background-color 200ms;
+			transition: background-color 400ms;
 			&:hover {
 				background-color: v.$primary;
 			}
@@ -130,14 +131,14 @@ nav {
 		}
 
 		//burger menu
-		@media screen and (max-width: 570px) {
-			.burger-btn{
+		@media screen and (max-width: 600px) {
+			.burger-btn {
 				display: flex;
 			}
 
 			.nav-links {
 				position: fixed;
-				right: -20rem;
+				right: -50%;
 				top: 0;
 
 				padding: 0 4rem;
@@ -148,14 +149,16 @@ nav {
 				flex-direction: column;
 				gap: v.$gap-xl;
 
-				background-color: v.$dark;
+				backdrop-filter: blur(1rem);
+				background-color: rgba(v.$dark, 0.9);
+				box-shadow: 0 0 2rem 0rem v.$dark-bright;
 				border-left: 0.1rem solid v.$dark-bright;
 
-				transition: right 200ms;
+				transition: right 100ms;
 			}
 		}
 
-				.opened {
+		.opened {
 			span {
 				&:nth-child(1) {
 					top: 50%;

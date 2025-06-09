@@ -31,8 +31,9 @@ ol {
 }
 
 .btn {
-  border-radius: 0.5rem;
   padding: 0.6rem 2rem;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
   cursor: pointer;
 }
 
@@ -77,9 +78,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(4rem);
-  background-color: #000000;
-  border-bottom: 1px solid #252422;
+  backdrop-filter: blur(1rem);
+  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom: 4px solid #252422;
+  box-shadow: 0 0 2rem 0rem #252422;
 }
 nav .container {
   position: relative;
@@ -115,7 +117,7 @@ nav .container .nav-links li::before {
   content: "";
   width: 100%;
   height: 0.1rem;
-  background-color: #64907b;
+  background-color: #32936F;
   transform: scaleX(0);
   transition: transform 200ms;
 }
@@ -153,33 +155,35 @@ nav .container .nav-btn {
   position: absolute;
   right: 0;
   background-color: transparent;
-  border: 1px solid #64907b;
-  transition: background-color 200ms;
+  border-color: #32936F;
+  transition: background-color 400ms;
 }
 nav .container .nav-btn:hover {
-  background-color: #64907b;
+  background-color: #32936F;
 }
 @media screen and (max-width: 780px) {
   nav .container .nav-btn {
     display: none;
   }
 }
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 600px) {
   nav .container .burger-btn {
     display: flex;
   }
   nav .container .nav-links {
     position: fixed;
-    right: -20rem;
+    right: -50%;
     top: 0;
     padding: 0 4rem;
     width: fit-content;
     height: 100dvh;
     flex-direction: column;
     gap: 2rem;
-    background-color: #000000;
+    backdrop-filter: blur(1rem);
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 2rem 0rem #252422;
     border-left: 0.1rem solid #252422;
-    transition: right 200ms;
+    transition: right 100ms;
   }
 }
 nav .container .opened span:nth-child(1) {

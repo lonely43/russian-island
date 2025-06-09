@@ -6,16 +6,16 @@ $secondary: #CCC5B9;
 $primary: #32936F;
 $warning: #FFA13C;
 
-// dark theme
-$dark-theme: true;
+// // dark theme
+// $dark-theme: false;
 
-@if $dark-theme {
-   $text: #ebebeb;
-   $background: #0d0f11;
-   $primary: #64907b;
-   $secondary: #3d4357;
-   $accent: #504b6c;
-}
+// @if $dark-theme {
+//    $text: #ebebeb;
+//    $background: #0d0f11;
+//    $primary: #64907b;
+//    $secondary: #3d4357;
+//    $accent: #504b6c;
+// }
 
 //gaps
 $gap-xxl: 3rem;
