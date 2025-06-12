@@ -6,6 +6,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 main {
@@ -17,7 +18,7 @@ main {
   padding: 0 2rem;
   margin: auto;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
 }
 
 a {
@@ -38,21 +39,43 @@ ol {
   cursor: pointer;
 }
 
+p {
+  color: #252422;
+}
+
 .m-h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 4.5em;
   font-weight: 700;
 }
 
-.link {
+.m-h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+.m-link {
   font-size: 1em;
   font-weight: 600;
 }
 
-.r-regular-1 {
+.r-rg-1 {
   font-family: "Roboto", sans-serif;
   font-size: 1.5em;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+.r-rg-2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+.r-rg-3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
 }
 
 * {
@@ -82,10 +105,10 @@ ol {
   }
 }
 nav {
+  z-index: 4;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0 2rem;
   width: 100%;
   height: 4.375rem;
   display: flex;
@@ -108,9 +131,9 @@ nav .container * {
 }
 nav .container .nav-logo {
   position: absolute;
-  left: 0;
+  left: 2rem;
   width: 100%;
-  max-width: 3rem;
+  max-width: 2.8rem;
 }
 nav .container .nav-logo img {
   width: 100%;
@@ -132,7 +155,7 @@ nav .container .nav-links li::before {
   width: 100%;
   height: 0.1rem;
   background-color: #32936F;
-  box-shadow: 0 0 0.8rem 0.1rem #32936F;
+  box-shadow: 0 0.1rem 0.8rem 0.1rem #32936F;
   transform: scaleX(0);
   transition: transform 200ms;
 }
@@ -143,6 +166,7 @@ nav .container .burger-btn {
   position: relative;
   z-index: 5;
   margin-left: auto;
+  margin-right: 2rem;
   display: none;
   width: 40px;
   height: 30px;
@@ -168,10 +192,10 @@ nav .container .burger-btn span:nth-child(3) {
 }
 nav .container .nav-btn {
   position: absolute;
-  right: 0;
+  right: 2rem;
   background-color: transparent;
   border-color: #32936F;
-  transition: background-color 400ms;
+  transition: background-color 200ms;
 }
 nav .container .nav-btn:hover {
   background-color: #32936F;
@@ -187,7 +211,7 @@ nav .container .nav-btn:hover {
   }
   nav .container .nav-links {
     position: fixed;
-    right: -50%;
+    right: -70%;
     top: 0;
     padding: 0 4rem;
     width: fit-content;
@@ -225,6 +249,7 @@ nav .container .opened-menu {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 .hero .container .hero-info {
   display: flex;
@@ -240,8 +265,18 @@ nav .container .opened-menu {
 .hero .container .hero-info .hero-info-title h1 {
   color: #FFFFFF;
 }
+@media screen and (max-width: 700px) {
+  .hero .container .hero-info .hero-info-title h1 {
+    font-size: 3em;
+  }
+}
 .hero .container .hero-info .hero-info-title p {
   color: #FFFFFF;
+}
+@media screen and (max-width: 700px) {
+  .hero .container .hero-info .hero-info-title p {
+    font-size: 1.3em;
+  }
 }
 .hero .container .hero-info-btns {
   display: flex;
@@ -296,4 +331,135 @@ nav .container .opened-menu {
   100% {
     bottom: 2rem;
   }
+}
+
+.summary {
+  padding: 3rem 0;
+  background-color: #FFFFFF;
+}
+.summary .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1560px) {
+  .summary .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+.summary .container .summary-info {
+  width: 100%;
+  max-width: 45rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.summary .container .summary-info .summary-info-title .m-h2 {
+  color: #32936F;
+}
+.summary .container .summary-info .summary-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.summary .container .summary-info .summary-info-advantages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+.summary .container .summary-info .summary-info-advantages li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media screen and (max-width: 555px) {
+  .summary .container .summary-info .summary-info-advantages li {
+    width: 100%;
+    max-width: 15rem;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.summary .container .summary-info .summary-info-advantages li img {
+  width: 100%;
+  max-width: 1.5rem;
+}
+.summary .container .summary-photo {
+  max-width: 48.3rem;
+}
+.summary .container .summary-photo img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.gallery {
+  padding: 6rem 0;
+  background-color: #F6F6F6;
+}
+.gallery .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.gallery .container .gallery-title h1 {
+  color: #32936F;
+}
+.gallery .container .gallery-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.gallery .container .gallery-info .gallery-info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .gallery .container .gallery-info .gallery-info-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 900px) {
+  .gallery .container .gallery-info .gallery-info-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.gallery .container .gallery-info .gallery-info-cards li img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.gallery .container .gallery-info .btn {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #32936F;
+  border-color: #32936F;
+  transition: 200ms;
+}
+.gallery .container .gallery-info .btn p {
+  color: #FFFFFF;
+}
+.gallery .container .gallery-info .btn svg {
+  fill: #FFFFFF;
+}
+.gallery .container .gallery-info .btn:hover {
+  background-color: #F6F6F6;
+}
+.gallery .container .gallery-info .btn:hover p {
+  color: #32936F;
+}
+.gallery .container .gallery-info .btn:hover svg {
+  fill: #32936F;
 }

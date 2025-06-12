@@ -1,0 +1,75 @@
+@use "../../../variables" as v;
+
+.summary {
+	padding: 3rem 0;
+	background-color: v.$white;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media screen and (max-width: 1560px) {
+			flex-direction: column;
+			justify-content: center;
+			gap: v.$gap-xl;
+		}
+
+		.summary-info {
+			width: 100%;
+			max-width: 45rem;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			gap: v.$gap-xl;
+
+			.summary-info-title {
+				.m-h2 {
+					color: v.$primary;
+				}
+			}
+
+			.summary-info-text {
+				display: flex;
+				flex-direction: column;
+				gap: v.$gap-xl;
+			}
+
+			.summary-info-advantages {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				gap: v.$gap-md;
+
+				li {
+					display: flex;
+					align-items: center;
+					gap: v.$gap-sm;
+
+					@media screen and (max-width: 555px) {
+						width: 100%;
+						max-width: 15rem;
+
+						flex-direction: column;
+						text-align: center;
+					}
+
+					img {
+						width: 100%;
+						max-width: 1.5rem;
+					}
+				}
+			}
+		}
+
+		.summary-photo {
+			max-width: 48.3rem;
+
+			img {
+				width: 100%;
+				border-radius: v.$b-1;
+			}
+		}
+	}
+}

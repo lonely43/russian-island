@@ -1,5 +1,6 @@
 // light theme
 $white: #FFFFFF;
+$gray: #F6F6F6;
 $dark: #000000;
 $dark-bright: #252422;
 $secondary: #CCC5B9;
@@ -25,5 +26,8 @@ $gap-md: 1rem;
 $gap-sm: 0.5rem;
 
 // other
-$b-1: 0.5rem;
-$b-2: 1rem;
+$b-1: 1rem;
+$b-2: 0.5rem;
+
+//z-index
+$index-nav: 4;

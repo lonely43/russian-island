@@ -1,0 +1,86 @@
+@use "../../../variables" as v;
+
+.gallery {
+	padding: 6rem 0;
+
+	background-color: v.$gray;
+
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: v.$gap-xl;
+
+		.gallery-title {
+			h1 {
+				color: v.$primary;
+			}
+		}
+
+		.gallery-info {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: v.$gap-md;
+
+			.gallery-info-cards {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: v.$gap-xl;
+
+            @media screen and (max-width: 1200px) {
+               grid-template-columns: repeat(2, 1fr);
+            }
+             @media screen and (max-width: 900px) {
+               grid-template-columns: repeat(1, 1fr);
+            }
+
+				li {
+					img {
+						width: 100%;
+
+						border-radius: v.$b-1;
+					}
+				}
+			}
+
+			.btn {
+				position: relative;
+
+				margin: 0 auto;
+
+            width: 100%;
+				max-width: 16rem;
+
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+
+				background-color: v.$primary;
+				border-color: v.$primary;
+
+				transition: 200ms;
+
+				p {
+					color: v.$white;
+				}
+				svg {
+					fill: v.$white;
+				}
+
+				&:hover {
+					background-color: v.$gray;
+
+					p {
+						color: v.$primary;
+					}
+					svg {
+						fill: v.$primary;
+					}
+				}
+			}
+		}
+	}
+}

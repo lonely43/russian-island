@@ -1,8 +1,8 @@
 @use "variables" as v;
 
 //fonts
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");     // font-family: "Roboto", sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); // font-family: "Montserrat", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); // font-family: "Roboto", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); // font-family: "Montserrat", sans-serif;
 
 body {
 	min-height: 100vh;
@@ -12,6 +12,8 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	overflow-x: hidden;
 }
 
 main {
@@ -23,7 +25,7 @@ main {
 	padding: 0 2rem;
 	margin: auto;
 	width: 100%;
-	max-width: 1400px;
+	max-width: 1600px;
 }
 
 a {
@@ -37,27 +39,46 @@ ol {
 	list-style: none;
 }
 
-.btn{
+.btn {
 	padding: 0.6rem 2rem;
-	border-radius: .5rem;
+	border-radius: v.$b-2;
 	border: 2px solid transparent;
 	cursor: pointer;
 }
 
+p{
+	color: v.$dark-bright;
+}
+
 // montserrat
-.m-h1{
+.m-h1 {
 	font-family: "Montserrat", sans-serif;
 	font-size: 4.5em;
 	font-weight: 700;
 }
-.link{
+.m-h2 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 2.25em;
+	font-weight: 700;
+}
+.m-link {
 	font-size: 1em;
 	font-weight: 600;
 }
 
 // roboto
-.r-regular-1{
+.r-rg-1 {
 	font-family: "Roboto", sans-serif;
 	font-size: 1.5em;
-	font-weight: 300;
+	font-weight: 400;
+}
+.r-rg-2 {
+	font-family: "Roboto", sans-serif;
+	font-size: 1.125em;
+	font-weight: 400;
+}
+.r-rg-3 {
+	font-family: "Roboto", sans-serif;
+	font-size: 1em;
+	font-weight: 400;
 }

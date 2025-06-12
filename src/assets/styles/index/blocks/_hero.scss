@@ -11,6 +11,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
 
 	.container {
 		.hero-info {
@@ -27,9 +28,17 @@
 
 				h1 {
 					color: v.$white;
+
+					@media screen and (max-width: 700px) {
+						font-size: 3em;
+					}
 				}
 				p {
 					color: v.$white;
+
+					@media screen and (max-width: 700px) {
+						font-size: 1.3em;
+					}
 				}
 			}
 		}

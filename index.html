@@ -25,19 +25,17 @@
 				</div>
 
 				<ul class="nav-links">
-					<li><a class="link" href="">О музее</a></li>
-					<li><a class="link" href="">Галерея</a></li>
-					<li><a class="link" href="">Цены</a></li>
-					<li><a class="link" href="">Отзывы</a></li>
-					<li><a class="link" href="">Контакты</a></li>
+					<li><a class="m-link" href="#summary">О музее</a></li>
+					<li><a class="m-link" href="#gallery">Галерея</a></li>
+					<li><a class="m-link" href="#price">Цены</a></li>
+					<li><a class="m-link" href="#feedback">Отзывы</a></li>
+					<li><a class="m-link" href="#summary">Контакты</a></li>
 				</ul>
 
-				<div class="burger-btn">
-					<span></span><span></span><span></span>
-				</div>
+				<div class="burger-btn"><span></span><span></span><span></span></div>
 
 				<a href="" class="nav-btn btn">
-					<p class="link">Посетить</p>
+					<p class="m-link">Посетить</p>
 				</a>
 			</div>
 		</nav>
@@ -48,27 +46,84 @@
 					<div class="hero-info">
 						<div class="hero-info-title">
 							<h1 class="m-h1">Русский Остров</h1>
-							<p class="r-regular-1">Этнографический парк, где оживает история русского быта</p>
+							<p class="r-rg-1">Этнографический парк, где оживает история русского быта</p>
 						</div>
 
 						<div class="hero-info-btns">
-							<a class="btn" href=""><p class="link">Купить билеты</p></a>
-							<a class="btn" href=""><p class="link">Узнать больше</p></a>
+							<a class="btn" href=""><p class="m-link">Купить билеты</p></a>
+							<a class="btn" href=""><p class="m-link">Узнать больше</p></a>
 						</div>
 					</div>
 				</div>
 
-				<a class="hero-arrow">
-					<img src="/public/hero/arrow.svg" alt="arrow">
+				<a href="#summary" class="hero-arrow">
+					<img src="/public/hero/arrow.svg" alt="arrow" />
 				</a>
 			</div>
 
-			<div class="summary">
-				<div class="container"></div>
+			<div class="summary" id="summary">
+				<div class="container">
+					<div class="summary-info">
+						<div class="summary-info-title">
+							<h1 class="m-h2">О нашем музее</h1>
+						</div>
+
+						<div class="summary-info-text">
+							<p class="r-rg-2">Этнографический парк "Русский Остров" - это уникальное пространство, где воссоздана целостная картина деревенского быта от архаичного ведения натурального хозяйства до капиталистических отношений.</p>
+							<p class="r-rg-2">Наши экспозиции позволяют буквально прикоснуться к истории, почувствовать себя частью разных эпох и понять, как жили наши предки.</p>
+						</div>
+
+						<ul class="summary-info-advantages">
+							<li>
+								<img src="/public/summary/clock.svg" alt="icon">
+								<p class="r-rg-3">2 часа полной экскурсии</p>
+							</li>
+							<li>
+								<img src="/public/summary/earth.svg" alt="icon">
+								<p class="r-rg-3">Аутентичные постройки</p>
+							</li>
+							<li>
+								<img src="/public/summary/people.svg" alt="icon">
+								<p class="r-rg-3">Экскурсии для всех</p>
+							</li>
+							<li>
+								<img src="/public/summary/documents.svg" alt="icon">
+								<p class="r-rg-3">Интерактивные экспонаты</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="summary-photo">
+						<img src="/public/hero.png" alt="photo" />
+					</div>
+				</div>
 			</div>
 
-			<div class="gallery">
-				<div class="container"></div>
+			<div class="gallery" id="gallery">
+				<div class="container">
+					<div class="gallery-title">
+						<h1 class="m-h2">Галерея музея</h1>
+					</div>
+
+					<div class="gallery-info">
+						<ul class="gallery-info-cards">
+							<li><img src="/public/hero.png" alt="photo" /></li>
+							<li><img src="/public/hero.png" alt="photo" /></li>
+							<li><img src="/public/hero.png" alt="photo" /></li>
+							<li><img src="/public/hero.png" alt="photo" /></li>
+							<li><img src="/public/hero.png" alt="photo" /></li>
+							<li><img src="/public/hero.png" alt="photo" /></li>
+						</ul>
+
+						<a class="btn">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+								<path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+								<path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z" />
+							</svg>
+							<p class="m-link">Смотреть все фото</p>
+						</a>
+					</div>
+				</div>
 			</div>
 
 			<div class="price">
