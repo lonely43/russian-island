@@ -63,7 +63,7 @@ nav {
 					height: 0.1rem;
 
 					background-color: v.$primary;
-					box-shadow: 0 .1rem .8rem .1rem v.$primary;
+					box-shadow: 0 .1rem .8rem 0rem v.$primary;
 
 					transform: scaleX(0);
 					transition: transform 200ms;

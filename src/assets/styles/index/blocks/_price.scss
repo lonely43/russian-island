@@ -1,0 +1,123 @@
+@use "../../../variables" as v;
+
+.price {
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		gap: v.$gap-xl;
+
+		.price-title {
+			color: v.$primary;
+		}
+
+		.price-cards {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: v.$gap-xl;
+
+			.price-cards-card {
+				$padding-y: 1.2rem;
+				$padding-x: 1.6rem;
+
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				border-radius: v.$b-1;
+				box-shadow: 0 0.5rem 0.5rem -0.1rem rgba(v.$dark, 0.3);
+
+				.price-cards-card-title {
+					padding: $padding-y $padding-x;
+
+					width: 100%;
+					background-color: v.$primary;
+
+					border-radius: v.$b-1 v.$b-1 0 0;
+
+					h3 {
+						color: v.$white;
+					}
+				}
+
+				.price-cards-card-info {
+					padding: $padding-y $padding-x;
+
+					height: 22rem; //del
+
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+
+					width: 100%;
+
+					.price-cards-card-info-content {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						gap: v.$gap-lg;
+
+						.price-cards-card-info-content-value {
+							h2 {
+								color: v.$primary;
+							}
+							p {
+								color: rgba(v.$dark, $alpha: 0.6);
+							}
+						}
+
+						ul {
+							width: 100%;
+
+							display: flex;
+							flex-direction: column;
+							gap: v.$gap-md;
+
+							li {
+								display: flex;
+								align-items: center;
+								gap: v.$gap-sm;
+
+								img {
+									width: 14px;
+									height: 14px;
+								}
+							}
+						}
+					}
+
+					.btn {
+						margin: 0 auto;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						width: 100%;
+
+						background-color: v.$primary;
+                  border-color: v.$primary;
+
+						p {
+							color: v.$white;
+						}
+
+						transition: 200ms;
+						&:hover,
+						&:focus,
+						&:active {
+							background-color: v.$white;
+
+                     p{
+                        color: v.$primary;;
+                     }
+						}
+					}
+				}
+			}
+		}
+	}
+}

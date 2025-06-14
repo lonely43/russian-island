@@ -46,10 +46,6 @@ ol {
 	cursor: pointer;
 }
 
-p{
-	color: v.$dark-bright;
-}
-
 // montserrat
 .m-h1 {
 	font-family: "Montserrat", sans-serif;
@@ -61,23 +57,33 @@ p{
 	font-size: 2.25em;
 	font-weight: 700;
 }
+.m-h3 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.25em;
+	font-weight: 700;
+}
 .m-link {
 	font-size: 1em;
 	font-weight: 600;
 }
 
 // roboto
-.r-rg-1 {
+.r-h2 {
+	font-family: "Roboto", sans-serif;
+	font-size: 2.25em;
+	font-weight: 700;
+}
+.r-rg1 {
 	font-family: "Roboto", sans-serif;
 	font-size: 1.5em;
 	font-weight: 400;
 }
-.r-rg-2 {
+.r-rg2 {
 	font-family: "Roboto", sans-serif;
 	font-size: 1.125em;
 	font-weight: 400;
 }
-.r-rg-3 {
+.r-rg3 {
 	font-family: "Roboto", sans-serif;
 	font-size: 1em;
 	font-weight: 400;
