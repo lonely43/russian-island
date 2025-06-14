@@ -443,7 +443,7 @@ nav .container .opened-menu {
 .gallery .container .gallery-info .gallery-info-cards li img {
   width: 100%;
   border-radius: 0.75rem;
-  box-shadow: 0 0.2rem 2rem -0.2rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.3rem 0.6rem -0.2rem rgba(0, 0, 0, 0.8);
 }
 .gallery .container .gallery-info .btn {
   position: relative;
@@ -473,6 +473,9 @@ nav .container .opened-menu {
   fill: #32936F;
 }
 
+.price {
+  padding: 6rem 0;
+}
 .price .container {
   display: flex;
   flex-direction: column;
@@ -494,7 +497,7 @@ nav .container .opened-menu {
   flex-direction: column;
   align-items: center;
   border-radius: 0.75rem;
-  box-shadow: 0 0.5rem 0.5rem -0.1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.3rem 0.6rem -0.2rem rgba(0, 0, 0, 0.2);
 }
 .price .container .price-cards .price-cards-card .price-cards-card-title {
   padding: 1.2rem 1.6rem;
@@ -507,7 +510,7 @@ nav .container .opened-menu {
 }
 .price .container .price-cards .price-cards-card .price-cards-card-info {
   padding: 1.2rem 1.6rem;
-  height: 22rem;
+  height: 24rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

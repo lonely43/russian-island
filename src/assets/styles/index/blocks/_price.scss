@@ -1,6 +1,8 @@
 @use "../../../variables" as v;
 
 .price {
+   padding: 6rem 0;
+   
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -28,14 +30,14 @@
 				align-items: center;
 
 				border-radius: v.$b-1;
-				box-shadow: 0 0.5rem 0.5rem -0.1rem rgba(v.$dark, 0.3);
+				box-shadow: 0 0.3rem .6rem -0.2rem rgba(v.$dark, 0.2);
 
 				.price-cards-card-title {
 					padding: $padding-y $padding-x;
 
 					width: 100%;
-					background-color: v.$primary;
 
+					background-color: v.$primary;
 					border-radius: v.$b-1 v.$b-1 0 0;
 
 					h3 {
@@ -46,7 +48,7 @@
 				.price-cards-card-info {
 					padding: $padding-y $padding-x;
 
-					height: 22rem; //del
+					height: 24rem; //del
 
 					display: flex;
 					flex-direction: column;
