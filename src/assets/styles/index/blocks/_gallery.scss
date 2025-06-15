@@ -13,6 +13,7 @@
 		gap: v.$gap-xl;
 
 		.gallery-title {
+			text-align: center;
 			h1 {
 				color: v.$primary;
 			}
@@ -42,7 +43,7 @@
 						width: 100%;
 
 						border-radius: v.$b-1;
-						box-shadow: 0 0.3rem .6rem -0.2rem rgba(v.$dark, 0.8);
+						box-shadow: 0 0.3rem 0.6rem -0.2rem rgba(v.$dark, 0.8);
 					}
 				}
 			}

@@ -33,7 +33,7 @@ ol {
 }
 
 .btn {
-  padding: 0.6rem 2rem;
+  padding: 0.8rem 2rem;
   border-radius: 0.5rem;
   border: 2px solid transparent;
   cursor: pointer;
@@ -415,6 +415,9 @@ nav .container .opened-menu {
   flex-direction: column;
   gap: 2rem;
 }
+.gallery .container .gallery-title {
+  text-align: center;
+}
 .gallery .container .gallery-title h1 {
   color: #32936F;
 }
@@ -480,41 +483,44 @@ nav .container .opened-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 .price .container .price-title {
+  text-align: center;
   color: #32936F;
 }
 .price .container .price-cards {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
 .price .container .price-cards .price-cards-card {
+  width: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 94%, #32936F 94%);
   border-radius: 0.75rem;
   box-shadow: 0 0.3rem 0.6rem -0.2rem rgba(0, 0, 0, 0.2);
 }
 .price .container .price-cards .price-cards-card .price-cards-card-title {
-  padding: 1.2rem 1.6rem;
+  padding: 1.2rem 1rem;
   width: 100%;
-  background-color: #32936F;
+  text-align: center;
+  background-color: #2B7C5E;
   border-radius: 0.75rem 0.75rem 0 0;
 }
 .price .container .price-cards .price-cards-card .price-cards-card-title h3 {
   color: #FFFFFF;
 }
 .price .container .price-cards .price-cards-card .price-cards-card-info {
-  padding: 1.2rem 1.6rem;
+  padding: calc(1.2rem + 5px) 1.6rem;
+  width: 100%;
   height: 24rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
 }
 .price .container .price-cards .price-cards-card .price-cards-card-info .price-cards-card-info-content {
   display: flex;
@@ -522,8 +528,11 @@ nav .container .opened-menu {
   align-items: center;
   gap: 1.5rem;
 }
+.price .container .price-cards .price-cards-card .price-cards-card-info .price-cards-card-info-content .price-cards-card-info-content-value {
+  text-align: center;
+}
 .price .container .price-cards .price-cards-card .price-cards-card-info .price-cards-card-info-content .price-cards-card-info-content-value h2 {
-  color: #32936F;
+  color: #2B7C5E;
 }
 .price .container .price-cards .price-cards-card .price-cards-card-info .price-cards-card-info-content .price-cards-card-info-content-value p {
   color: rgba(0, 0, 0, 0.6);
@@ -549,8 +558,8 @@ nav .container .opened-menu {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #32936F;
-  border-color: #32936F;
+  background-color: #2B7C5E;
+  border-color: #2B7C5E;
   transition: 200ms;
 }
 .price .container .price-cards .price-cards-card .price-cards-card-info .btn p {
@@ -560,5 +569,52 @@ nav .container .opened-menu {
   background-color: #FFFFFF;
 }
 .price .container .price-cards .price-cards-card .price-cards-card-info .btn:hover p, .price .container .price-cards .price-cards-card .price-cards-card-info .btn:focus p, .price .container .price-cards .price-cards-card .price-cards-card-info .btn:active p {
+  color: #2B7C5E;
+}
+.price .container .price-cards [in-the-center] {
+  border: 3px solid #32936F;
+  border-radius: calc(0.75rem + 0px);
+}
+.price .container .price-cards [in-the-center] .price-cards-card-title {
+  background-color: #32936F;
+}
+.price .container .price-cards [in-the-center] .price-cards-card-info-content-value h2 {
+  color: #32936F !important;
+}
+.price .container .price-cards [in-the-center] .btn {
+  background-color: #32936F !important;
+  border-color: #32936F !important;
+}
+.price .container .price-cards [in-the-center] .btn:hover, .price .container .price-cards [in-the-center] .btn:focus, .price .container .price-cards [in-the-center] .btn:active {
+  background-color: #FFFFFF !important;
+}
+.price .container .price-cards [in-the-center] .btn:hover p, .price .container .price-cards [in-the-center] .btn:focus p, .price .container .price-cards [in-the-center] .btn:active p {
+  color: #32936F;
+}
+.price .container .price-info {
+  padding: 2rem 2.2rem;
+  width: 100%;
+  max-width: 50rem;
+  background-color: #F6F6F6;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.price .container .price-info .price-info-title {
+  text-align: center;
+  color: #32936F;
+}
+.price .container .price-info .price-info-text {
+  text-align: center;
+}
+.price .container .price-info a {
+  display: flex;
+  gap: 0.5rem;
+}
+.price .container .price-info a p {
+  text-align: center;
   color: #32936F;
 }

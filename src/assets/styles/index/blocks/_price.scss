@@ -1,23 +1,22 @@
 @use "../../../variables" as v;
 
 .price {
-   padding: 6rem 0;
-   
+	padding: 6rem 0;
+
 	.container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-
-		gap: v.$gap-xl;
+		gap: v.$gap-xxl;
 
 		.price-title {
+			text-align: center;
 			color: v.$primary;
 		}
 
 		.price-cards {
 			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			justify-content: center;
 			flex-wrap: wrap;
 			gap: v.$gap-xl;
 
@@ -25,19 +24,25 @@
 				$padding-y: 1.2rem;
 				$padding-x: 1.6rem;
 
+				width: 20rem;
+
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 
+				background: linear-gradient(0deg, v.$white 0%, v.$white 94%, v.$primary 94%);
+
 				border-radius: v.$b-1;
-				box-shadow: 0 0.3rem .6rem -0.2rem rgba(v.$dark, 0.2);
+				box-shadow: 0 0.3rem 0.6rem -0.2rem rgba(v.$dark, 0.2);
 
 				.price-cards-card-title {
-					padding: $padding-y $padding-x;
+					padding: $padding-y 1rem;
 
 					width: 100%;
 
-					background-color: v.$primary;
+					text-align: center;
+
+					background-color: v.$primary-dark;
 					border-radius: v.$b-1 v.$b-1 0 0;
 
 					h3 {
@@ -46,15 +51,14 @@
 				}
 
 				.price-cards-card-info {
-					padding: $padding-y $padding-x;
+					padding: calc($padding-y + 5px) $padding-x;
 
+					width: 100%;
 					height: 24rem; //del
 
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
-
-					width: 100%;
 
 					.price-cards-card-info-content {
 						display: flex;
@@ -63,8 +67,9 @@
 						gap: v.$gap-lg;
 
 						.price-cards-card-info-content-value {
+							text-align: center;
 							h2 {
-								color: v.$primary;
+								color: v.$primary-dark;
 							}
 							p {
 								color: rgba(v.$dark, $alpha: 0.6);
@@ -100,8 +105,8 @@
 
 						width: 100%;
 
-						background-color: v.$primary;
-                  border-color: v.$primary;
+						background-color: v.$primary-dark;
+						border-color: v.$primary-dark;
 
 						p {
 							color: v.$white;
@@ -113,11 +118,75 @@
 						&:active {
 							background-color: v.$white;
 
-                     p{
-                        color: v.$primary;;
-                     }
+							p {
+								color: v.$primary-dark;
+							}
 						}
 					}
+				}
+			}
+
+			[in-the-center] {
+				border: 3px solid v.$primary;
+				border-radius: calc(v.$b-1 + 0px);
+
+				.price-cards-card-title {
+					background-color: v.$primary;
+				}
+
+				.price-cards-card-info-content-value {
+					h2 {
+						color: v.$primary !important;
+					}
+				}
+				.btn {
+					background-color: v.$primary !important;
+
+					border-color: v.$primary !important;
+
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: v.$white !important;
+
+						p {
+							color: v.$primary;
+						}
+					}
+				}
+			}
+		}
+
+		.price-info {
+			padding: 2rem 2.2rem;
+
+			width: 100%;
+			max-width: 50rem;
+
+			background-color: v.$gray;
+			border-radius: v.$b-1;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: v.$gap-md;
+
+			.price-info-title {
+				text-align: center;
+				color: v.$primary;
+			}
+
+			.price-info-text {
+				text-align: center;
+			}
+
+			a {
+				display: flex;
+				gap: v.$gap-sm;
+				p {
+					text-align: center;
+					color: v.$primary;
 				}
 			}
 		}
