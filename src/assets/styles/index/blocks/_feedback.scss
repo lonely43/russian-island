@@ -1,0 +1,85 @@
+@use "../../../variables" as v;
+
+.feedback {
+	padding: 6rem 0;
+
+	background-color: v.$gray;
+
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: v.$gap-xl;
+
+		.feedback-title {
+			text-align: center;
+			color: v.$primary;
+		}
+
+		.feedback-cards {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: v.$gap-xl;
+
+			.feedback-cards-card {
+				padding: 1rem;
+
+				max-width: 28rem;
+				width: 100%;
+
+				display: flex;
+				flex-direction: column;
+				gap: v.$gap-lg;
+
+				border-radius: v.$b-1;
+				background-color: v.$white;
+
+				.feedback-cards-card-title {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					gap: v.$gap-md;
+
+					.feedback-cards-card-title-avatar {
+						max-width: 3rem;
+						height: 100%;
+
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						img {
+							width: 100%;
+							height: 100%;
+                     
+                     object-fit: cover;
+							border-radius: 100%;
+						}
+					}
+
+					.feedback-cards-card-title-info {
+						display: flex;
+						flex-direction: column;
+                  justify-content: center;
+						//gap: v.$gap-sm;
+
+						h4 {
+						}
+
+						.feedback-cards-card-title-info-stars {
+							display: flex;
+							gap: 0;
+						}
+					}
+				}
+				.feedback-cards-card-info {
+					p {
+					}
+				}
+			}
+		}
+	}
+}
