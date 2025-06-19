@@ -38,6 +38,12 @@
 				background-color: v.$white;
 				box-shadow: 0 0.3rem 0.6rem -0.2rem rgba(v.$dark, 0.2);
 
+				transition: 200ms;
+
+				&:hover{
+					transform: translateY(-1rem);
+				}
+
 				.feedback-cards-card-title {
 					display: flex;
 					justify-content: flex-start;
@@ -74,6 +80,10 @@
 						.feedback-cards-card-title-info-stars {
 							display: flex;
 							gap: 0;
+							
+							img{
+								width: 1.2rem;
+							}
 						}
 					}
 				}

@@ -651,6 +651,10 @@ nav .container .opened-menu {
   border-radius: 0.75rem;
   background-color: #FFFFFF;
   box-shadow: 0 0.3rem 0.6rem -0.2rem rgba(0, 0, 0, 0.2);
+  transition: 200ms;
+}
+.feedback .container .feedback-cards .feedback-cards-card:hover {
+  transform: translateY(-1rem);
 }
 .feedback .container .feedback-cards .feedback-cards-card .feedback-cards-card-title {
   display: flex;
@@ -679,6 +683,9 @@ nav .container .opened-menu {
 .feedback .container .feedback-cards .feedback-cards-card .feedback-cards-card-title .feedback-cards-card-title-info .feedback-cards-card-title-info-stars {
   display: flex;
   gap: 0;
+}
+.feedback .container .feedback-cards .feedback-cards-card .feedback-cards-card-title .feedback-cards-card-title-info .feedback-cards-card-title-info-stars img {
+  width: 1.2rem;
 }
 .feedback .container .frame div {
   width: 560px;
