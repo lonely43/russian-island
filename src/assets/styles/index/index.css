@@ -632,7 +632,7 @@ nav .container .opened-menu {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 .feedback .container .feedback-title {
   text-align: center;
@@ -646,14 +646,15 @@ nav .container .opened-menu {
   gap: 2rem;
 }
 .feedback .container .feedback-cards .feedback-cards-card {
-  padding: 1rem;
-  max-width: 28rem;
+  padding: 1.4rem;
+  max-width: 29rem;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   border-radius: 0.75rem;
   background-color: #FFFFFF;
+  box-shadow: 0 0.3rem 0.6rem -0.2rem rgba(0, 0, 0, 0.2);
 }
 .feedback .container .feedback-cards .feedback-cards-card .feedback-cards-card-title {
   display: flex;
@@ -662,17 +663,17 @@ nav .container .opened-menu {
   gap: 1rem;
 }
 .feedback .container .feedback-cards .feedback-cards-card .feedback-cards-card-title .feedback-cards-card-title-avatar {
-  max-width: 3rem;
+  min-height: 3rem;
   height: 100%;
+  max-width: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .feedback .container .feedback-cards .feedback-cards-card .feedback-cards-card-title .feedback-cards-card-title-avatar img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 100%;
+  height: 3rem;
+  border-radius: 50%;
 }
 .feedback .container .feedback-cards .feedback-cards-card .feedback-cards-card-title .feedback-cards-card-title-info {
   display: flex;
@@ -682,4 +683,29 @@ nav .container .opened-menu {
 .feedback .container .feedback-cards .feedback-cards-card .feedback-cards-card-title .feedback-cards-card-title-info .feedback-cards-card-title-info-stars {
   display: flex;
   gap: 0;
+}
+.feedback .container .frame div {
+  width: 560px;
+  height: 310px;
+}
+.feedback .container .frame div iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #F6F6F6;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+.feedback .container .frame div iframe p {
+  color: red !important;
+}
+@media screen and (max-width: 560px) {
+  .feedback .container .frame div {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+.yandex-map iframe {
+  width: 100%;
+  height: 400px;
 }

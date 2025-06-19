@@ -10,7 +10,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		gap: v.$gap-xl;
+		gap: v.$gap-xxl;
 
 		.feedback-title {
 			text-align: center;
@@ -25,17 +25,18 @@
 			gap: v.$gap-xl;
 
 			.feedback-cards-card {
-				padding: 1rem;
+				padding: 1.4rem;
 
-				max-width: 28rem;
+				max-width: 29rem;
 				width: 100%;
 
 				display: flex;
 				flex-direction: column;
-				gap: v.$gap-lg;
+				gap: v.$gap-md;
 
 				border-radius: v.$b-1;
 				background-color: v.$white;
+				box-shadow: 0 0.3rem 0.6rem -0.2rem rgba(v.$dark, 0.2);
 
 				.feedback-cards-card-title {
 					display: flex;
@@ -44,8 +45,9 @@
 					gap: v.$gap-md;
 
 					.feedback-cards-card-title-avatar {
-						max-width: 3rem;
+						min-height: 3rem;
 						height: 100%;
+						max-width: 3rem;
 
 						display: flex;
 						align-items: center;
@@ -53,17 +55,17 @@
 
 						img {
 							width: 100%;
-							height: 100%;
-                     
-                     object-fit: cover;
-							border-radius: 100%;
+							height: 3rem;
+
+							// object-fit: cover;
+							border-radius: 50%;
 						}
 					}
 
 					.feedback-cards-card-title-info {
 						display: flex;
 						flex-direction: column;
-                  justify-content: center;
+						justify-content: center;
 						//gap: v.$gap-sm;
 
 						h4 {
@@ -78,6 +80,30 @@
 				.feedback-cards-card-info {
 					p {
 					}
+				}
+			}
+		}
+
+		.frame {
+			div {
+				width: 560px;
+				height: 310px;
+
+				iframe {
+					width: 100%;
+					height: 100%;
+					border: 1px solid v.$gray;
+					border-radius: v.$b-2;
+					box-sizing: border-box;
+
+					p {
+						color: red !important;
+					}
+				}
+
+				@media screen and (max-width: 560px) {
+					width: 100%;
+					height: 350px;
 				}
 			}
 		}
