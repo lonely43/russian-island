@@ -47,17 +47,21 @@
 					align-items: center;
 					gap: v.$gap-sm;
 
+					p{
+						font-weight: 500;
+					}
+
+					img {
+						width: 100%;
+						max-width: 1.5rem;
+					}
+
 					@media screen and (max-width: 555px) {
 						width: 100%;
 						max-width: 15rem;
 
 						flex-direction: column;
 						text-align: center;
-					}
-
-					img {
-						width: 100%;
-						max-width: 1.5rem;
 					}
 				}
 			}

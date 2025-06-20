@@ -1,0 +1,192 @@
+@use "../../../variables" as v;
+
+.contacts-section {
+	padding: 6rem 0;
+
+	background-color: v.$white;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: v.$gap-xxl;
+
+		.section-title {
+			text-align: center;
+			color: v.$primary;
+		}
+
+		.contacts-container {
+			display: flex;
+			flex-direction: column;
+			gap: 2.5rem;
+
+			@media (min-width: 1024px) {
+				flex-direction: row;
+			}
+		}
+
+		.contact-info {
+			padding: 2rem;
+
+			background-color: v.$gray;
+			border-radius: 0.75rem;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+			@media (min-width: 1024px) {
+				width: 50%;
+			}
+
+			display: flex;
+			flex-direction: column;
+			gap: v.$gap-lg;
+
+			.contact-info-title {
+				color: v.$primary;
+			}
+
+			.contact-details {
+				display: flex;
+				flex-direction: column;
+				gap: v.$gap-lg;
+
+				.contact-details-item {
+					display: flex;
+					align-items: flex-start;
+					gap: v.$gap-md;
+
+					.icon-wrapper {
+						display: flex;
+						align-items: center;
+
+						svg {
+							width: 1.5rem;
+							height: 1.5rem;
+							fill: v.$primary;
+						}
+					}
+
+					.content {
+						display: flex;
+						flex-direction: column;
+						gap: v.$gap-sm;
+
+						.content-info {
+							display: flex;
+							flex-direction: column;
+							gap: 0;
+
+							h4 {
+								margin-bottom: v.$gap-ssm;
+								color: v.$dark;
+							}
+
+							a {
+								color: v.$dark-bright;
+							}
+						}
+
+						.additional-info {
+							font-size: 0.875rem;
+							color: v.$primary;
+						}
+					}
+				}
+			}
+
+			.directions {
+				border-top: 1px solid rgba(v.$primary, 0.6);
+				padding-top: 1.5rem;
+
+				&__title {
+					font-weight: 600;
+					font-size: 1.125rem;
+					color: v.$dark;
+					margin-bottom: 1rem;
+				}
+
+				.transport-list {
+					display: flex;
+					flex-direction: column;
+					gap: v.$gap-md;
+
+					&__item {
+						display: flex;
+						align-items: center;
+
+						.transport-icon {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 1.5rem;
+							height: 1.5rem;
+							margin-right: v.$gap-md;
+						}
+					}
+				}
+			}
+		}
+
+		.map-container {
+			height: 38rem;
+			border-radius: 0.75rem;
+			overflow: hidden;
+			box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+			@media (min-width: 1024px) {
+				width: 50%;
+			}
+
+			iframe {
+				width: 100%;
+				height: 100%;
+				//	filter: grayscale(20%) contrast(90%) saturate(90%) hue-rotate(10deg);
+			}
+		}
+
+		// Особенности посещения
+		.visit-features {
+			padding: 2rem;
+
+			background-color: v.$gray;
+			border-radius: 0.75rem;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+			display: flex;
+			flex-direction: column;
+			gap: v.$gap-lg;
+
+			&__title {
+				color: v.$primary;
+			}
+
+			.features-grid {
+				display: grid;
+				gap: 2rem;
+
+				@media (min-width: 768px) {
+					grid-template-columns: repeat(2, 1fr);
+				}
+
+				.feature-item {
+					display: flex;
+					align-items: center;
+               gap: v.$gap-md;
+
+					.icon-wrapper {
+						svg {
+							width: 1.5rem;
+							height: 1.5rem;
+						}
+					}
+
+					.content {
+						h4 {
+							color: v.$dark;
+							margin-bottom: 0.25rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
