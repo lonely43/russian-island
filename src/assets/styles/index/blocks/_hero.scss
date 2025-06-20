@@ -54,7 +54,7 @@
 				transition: 200ms;
 
 				&:hover, &:focus, &:active {
-					transform: scale(1.1);
+					transform: translateY(-.4rem);
 				}
 
 				// styling each btn
