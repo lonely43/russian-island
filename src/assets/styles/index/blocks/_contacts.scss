@@ -63,7 +63,6 @@
 								fill: v.$primary;
 							}
 						}
-
 						.content {
 							display: flex;
 							flex-direction: column;
@@ -72,10 +71,9 @@
 							.content-info {
 								display: flex;
 								flex-direction: column;
-								gap: 0;
 
 								h4 {
-									margin-bottom: v.$gap-ssm;
+									margin-bottom: v.$gap-sm;
 									color: v.$dark;
 								}
 
@@ -83,8 +81,20 @@
 									color: v.$dark-bright;
 
 									transition: opacity 200ms;
-									&:hover{
+									&:hover {
 										opacity: 0.8;
+									}
+								}
+
+								&__social-media {
+									display: flex;
+									gap: v.$gap-md;
+
+									a{
+										max-width: 2rem;
+										img{
+											width: 100%;
+										}
 									}
 								}
 							}
