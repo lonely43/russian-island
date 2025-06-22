@@ -90,9 +90,12 @@
 									display: flex;
 									gap: v.$gap-md;
 
-									a{
+									a {
+										display: flex;
+										justify-content: center;
+										align-items: center;
 										max-width: 2rem;
-										img{
+										img {
 											width: 100%;
 										}
 									}

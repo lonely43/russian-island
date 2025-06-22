@@ -807,6 +807,9 @@ nav .container .opened-menu {
   gap: 1rem;
 }
 .contacts-section .container .contacts-container .contact-info .contact-details .contact-details-item .content .content-info__social-media a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 2rem;
 }
 .contacts-section .container .contacts-container .contact-info .contact-details .contact-details-item .content .content-info__social-media a img {
