@@ -272,7 +272,7 @@ footer .container {
 }
 footer .container p,
 footer .container a {
-  color: #CCC5B9;
+  color: #b4aea3;
 }
 footer .container a {
   transition: opacity 200ms;
@@ -286,14 +286,6 @@ footer .container .footer-info-cards {
   justify-content: space-between;
   align-items: flex-start;
   gap: 1.5rem;
-}
-@media screen and (max-width: 1142px) {
-  footer .container .footer-info-cards {
-    justify-content: center;
-  }
-  footer .container .footer-info-cards__card {
-    width: 100%;
-  }
 }
 footer .container .footer-info-cards__card {
   max-width: 23rem;
@@ -320,7 +312,7 @@ footer .container .footer-info-cards__card .card-info .card-info-list li .icon {
   justify-content: center;
 }
 footer .container .footer-info-cards__card .card-info .card-info-list li .icon svg {
-  fill: #CCC5B9;
+  fill: #b4aea3;
 }
 footer .container .footer-info-cards__card .card-info .card-info-time {
   padding-bottom: 2rem;
@@ -338,6 +330,15 @@ footer .container .footer-info-cards__card .card-social-media a {
 }
 footer .container .footer-info-cards__card .card-social-media a img {
   width: 100%;
+}
+@media screen and (max-width: 1142px) {
+  footer .container .footer-info-cards {
+    justify-content: center;
+  }
+  footer .container .footer-info-cards__card {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 footer .container .footer-under-info {
   border-top: 1px solid #32936F;
