@@ -1,7 +1,110 @@
 @use "../variables" as v;
 
-footer{
-   background-color: v.$dark;
+footer {
+	padding-top: 3rem;
+	padding-bottom: 2rem;
 
-   
+	background-color: v.$dark-bright;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: v.$gap-lg;
+
+		p,
+		a {
+			color: v.$beige;
+		}
+
+		a {
+			transition: opacity 200ms;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+
+		.footer-info-cards {
+			display: flex;
+         flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+         gap: v.$gap-lg;
+
+         @media screen and (max-width: 1142px) {
+            justify-content: center;
+            // flex-direction: column;
+            // align-items: center;
+            // gap: v.$gap-lg;
+
+            &__card{
+               width: 100%;
+            }
+         }
+
+			&__card {
+				max-width: 23rem;
+
+				display: flex;
+				flex-direction: column;
+				gap: v.$gap-md;
+
+				.card-title {
+					color: v.$white;
+				}
+
+				.card-info {
+					.card-info-list {
+						display: flex;
+						flex-direction: column;
+						gap: v.$gap-sm;
+
+						li {
+							display: flex;
+							align-items: center;
+							gap: v.$gap-sm;
+
+							.icon {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+
+								svg {
+									fill: v.$beige;
+								}
+							}
+						}
+					}
+
+					.card-info-time {
+						padding-bottom: 2rem;
+						li {
+							display: flex;
+							justify-content: space-between;
+						}
+					}
+				}
+
+				.card-social-media {
+					display: flex;
+					gap: v.$gap-md;
+
+					a {
+						max-width: 2rem;
+						img {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+
+		.footer-under-info {
+			border-top: 1px solid v.$primary;
+			padding-top: v.$gap-lg;
+			&__copyright {
+				p {
+				}
+			}
+		}
+	}
 }
