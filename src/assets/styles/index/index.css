@@ -856,6 +856,7 @@ nav .container .opened-menu {
   }
 }
 .contacts-section .container .contacts-container .map-container iframe {
+  border-radius: 0.75rem;
   width: 100%;
   height: 100%;
 }
